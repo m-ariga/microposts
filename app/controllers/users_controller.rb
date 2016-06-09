@@ -12,7 +12,7 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     if @user.update(edit_params)
       redirect_to @user
-    flash[:success] = "Your Profile has been updated"
+    flash[:success] = "Your Profile has been updated!"
     else
       render 'edit'
     end
