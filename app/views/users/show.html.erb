@@ -1,7 +1,13 @@
 <h1>
   <%= gravatar_for @user %>
   <%= @user.name %>
-  <%= @user.location %>
-  <%= @user.profile %>
-  <%= link_to "Edit your profile", edit_user_path, class: "btn btn-lg btn-primary"%>
 </h1>
+<div>
+  <h2>
+    <%= @user.location %></br>
+    <%= @user.profile %></br>
+    <%= link_to "Edit your profile", edit_user_path, class: "btn btn-sm btn-primary"%>
+  </h2>
+  
+</div>
+
