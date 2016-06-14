@@ -3,9 +3,7 @@ class CreateRelationships < ActiveRecord::Migration
     create_table :relationships do |t|
       t.references :follower, index: true
       t.references :followed, index: true
-
-      t.timestamps null: false
-
+      
       t.index [:follower_id, :followed_id], unique: true # この行を追加
     end
   end
