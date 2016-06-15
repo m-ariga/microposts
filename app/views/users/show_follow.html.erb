@@ -12,8 +12,8 @@
   <div class="col-md-8">
     <h3><%= @title %></h3>
     <% @users.each do |user| %>
-      <ul class="followings/followers">
-        <li><%= link_to gravatar_for(user), user_path(user) %> <%= user.name %></li>
+      <ul class="followings/followers", style="list-style:none;">
+        <li><%= link_to gravatar_for(user, size: 30), user_path(user) %> <%= user.name %></li>
       </ul>
     <% end %>
   </div>
